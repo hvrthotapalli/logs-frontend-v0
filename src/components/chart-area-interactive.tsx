@@ -29,34 +29,28 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export const description = "An interactive area chart";
 
-const chartData = [
-  { date: "2024-04-01", desktop: 222, mobile: 150 },
-  { date: "2024-04-02", desktop: 97, mobile: 180 },
-  { date: "2024-04-03", desktop: 167, mobile: 120 },
-  { date: "2024-04-04", desktop: 242, mobile: 260 },
-  { date: "2024-04-05", desktop: 373, mobile: 290 },
-  { date: "2024-04-06", desktop: 301, mobile: 340 },
-  { date: "2024-04-07", desktop: 245, mobile: 180 },
-  { date: "2024-04-08", desktop: 409, mobile: 320 },
-  { date: "2024-04-09", desktop: 59, mobile: 110 },
-  { date: "2024-04-10", desktop: 261, mobile: 190 },
-];
-
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  desktop: {
-    label: "Desktop",
-    color: "red",
-  },
-  mobile: {
-    label: "Mobile",
+  Success: {
+    label: "Success",
     color: "green",
   },
+  Failed: {
+    label: "Failed",
+    color: "red",
+  },
+  "Partial Success": {
+    label: "Partial Success",
+    color: "orange",
+  },
 } satisfies ChartConfig;
+export type ChartDatum = {
+  date: string;
+  Success: number;
+  Failed: number;
+  "Partial Success": number;
+};
 
-export function ChartAreaInteractive() {
+export function ChartAreaInteractive({ data }: { data: ChartDatum[] }) {
   const isMobile = useIsMobile();
   const [timeRange, setTimeRange] = React.useState("90d");
 
@@ -66,9 +60,9 @@ export function ChartAreaInteractive() {
     }
   }, [isMobile]);
 
-  const filteredData = chartData.filter((item) => {
+  const filteredData = data.filter((item) => {
     const date = new Date(item.date);
-    const referenceDate = new Date("2024-06-30");
+    const referenceDate = new Date(data[data.length - 1]?.date || 0);
     let daysToSubtract = 90;
     if (timeRange === "30d") {
       daysToSubtract = 30;
@@ -131,13 +125,17 @@ export function ChartAreaInteractive() {
         >
           <AreaChart data={filteredData}>
             <defs>
-              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="red" stopOpacity={1.0} />
-                <stop offset="95%" stopColor="red" stopOpacity={0.1} />
-              </linearGradient>
-              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillSuccess" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="green" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="green" stopOpacity={0.1} />
+              </linearGradient>
+              <linearGradient id="fillFailed" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="red" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="red" stopOpacity={0.1} />
+              </linearGradient>
+              <linearGradient id="fillPartial" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="orange" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="orange" stopOpacity={0.1} />
               </linearGradient>
             </defs>
             <CartesianGrid vertical={false} />
@@ -171,17 +169,24 @@ export function ChartAreaInteractive() {
               }
             />
             <Area
-              dataKey="mobile"
+              dataKey="Failed"
               type="natural"
-              fill="url(#fillMobile)"
-              stroke="var(--color-mobile)"
+              fill="url(#fillFailed)"
+              stroke="var(--color-Failed)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="Partial Success"
               type="natural"
-              fill="url(#fillDesktop)"
-              stroke="var(--color-desktop)"
+              fill="url(#fillPartial)"
+              stroke="var(--color-Partial Success)"
+              stackId="a"
+            />
+            <Area
+              dataKey="Success"
+              type="natural"
+              fill="url(#fillSuccess)"
+              stroke="var(--color-Success)"
               stackId="a"
             />
           </AreaChart>
