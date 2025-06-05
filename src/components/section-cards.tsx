@@ -1,4 +1,9 @@
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
+import {
+  IconCheck,
+  IconX,
+  IconAlertTriangle,
+  IconFile,
+} from "@tabler/icons-react";
 
 import { Badge } from "@/components/ui/badge";
 import {
@@ -10,91 +15,81 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export function SectionCards() {
+export function SectionCards({
+  totalSuccess,
+  totalFailed,
+  partialSuccess,
+  overallFiles,
+}: {
+  totalSuccess: number;
+  totalFailed: number;
+  partialSuccess: number;
+  overallFiles: number;
+}) {
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Total Success</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,250.00
+            {totalSuccess.toLocaleString()}
           </CardTitle>
           <CardAction>
             <Badge className="bg-green-500 text-white" variant="default">
-              <IconTrendingUp />
-              +12.5%
+              <IconCheck />
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Trending up this month <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Visitors for the last 6 months
-          </div>
+          <div className="text-muted-foreground">Completed runs</div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Total Failures</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            1,234
+            {totalFailed.toLocaleString()}
           </CardTitle>
           <CardAction>
             <Badge className="bg-red-500 text-white" variant="default">
-              <IconTrendingDown />
-              -20%
+              <IconX />
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Down 20% this period <IconTrendingDown className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Acquisition needs attention
-          </div>
+          <div className="text-muted-foreground">Runs with failures</div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Partial Success</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            45,678
+            {partialSuccess.toLocaleString()}
           </CardTitle>
           <CardAction>
             <Badge className="bg-amber-500 text-white" variant="default">
-              <IconTrendingUp />
-              +12.5%
+              <IconAlertTriangle />
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Strong user retention <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Engagement exceed targets</div>
+          <div className="text-muted-foreground">Runs partially successful</div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Overall Files</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            4.5%
+            {overallFiles.toLocaleString()}
           </CardTitle>
           <CardAction>
             <Badge className="bg-gray-200 text-black" variant="default">
-              <IconTrendingUp />
-              +4.5%
+              <IconFile />
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Steady performance increase <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Meets growth projections</div>
+          <div className="text-muted-foreground">Files processed overall</div>
         </CardFooter>
       </Card>
     </div>
