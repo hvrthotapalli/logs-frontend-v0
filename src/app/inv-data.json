@@ -1,0 +1,673 @@
+[
+  {
+    "transaction_id": "79499406b8610b5ec5c0284c07e92f30",
+    "source_log_file": "JobsResults22052025.txt",
+    "run_start_time": "2025-05-22 12:08:55",
+    "run_end_time": null,
+    "email_response_status_code": null,
+    "total_email_count": null,
+    "subject": "Unknown Subject",
+    "files_processed": [],
+    "total_attachments_in_run": 0,
+    "files_successfully_processed": 0,
+    "files_failed_processing": 0,
+    "run_status": "Incomplete",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "20f16ec84c1eceb599e40752a07c0f3d",
+    "source_log_file": "JobsResults22052025.txt",
+    "run_start_time": "2025-05-22 12:09:24",
+    "run_end_time": "2025-05-22 12:09:53",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "FW: Exception_PDF's_JuneTest_LNIP",
+    "files_processed": [
+      {
+        "id": "e317915f7f1847e19ff2749f925f45fc",
+        "file_name": "corruptedInvoice.pdf",
+        "bod_id": null,
+        "bod_status": null,
+        "doc_added_to_idm": false,
+        "notification_sent": false,
+        "idp_status": "Exception: Bad Request while Polling OCR.",
+        "idp_response_code": null,
+        "fields": null,
+        "items": [],
+        "file_status": "Failed",
+        "raw_content_snippet": "Exception occured while reading the email:Unexpected Error occured in ProcessInvoice Activity: Unexpected Error occured in Invoke ExtractAttributesfromDocument Activity: Unexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.\n",
+        "errors": [
+          "Unexpected Error occured in ProcessInvoice Activity: Unexpected Error occured in Invoke ExtractAttributesfromDocument Activity: Unexpected Error occured in Extract Data Activity: Bad Request while Polling OCR."
+        ]
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 0,
+    "files_failed_processing": 1,
+    "run_status": "Failed (All Files Failed)",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "76fbaa3a71290987114b655d56c6c26a",
+    "source_log_file": "JobsResults22052025.txt",
+    "run_start_time": "2025-05-22 17:27:36",
+    "run_end_time": "2025-05-22 17:27:38",
+    "email_response_status_code": "400",
+    "total_email_count": "0",
+    "subject": "Unknown Subject",
+    "files_processed": [],
+    "total_attachments_in_run": 0,
+    "files_successfully_processed": 0,
+    "files_failed_processing": 0,
+    "run_status": "Completed (No Attachments)",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "f13981a2c1fc2b3d910dc33cb08e2291",
+    "source_log_file": "JobsResults22052025.txt",
+    "run_start_time": "2025-05-22 18:13:29",
+    "run_end_time": "2025-05-22 18:13:40",
+    "email_response_status_code": "200",
+    "total_email_count": "2",
+    "subject": "RE: Status on Server Provisoning",
+    "files_processed": [],
+    "total_attachments_in_run": 0,
+    "files_successfully_processed": 0,
+    "files_failed_processing": 0,
+    "run_status": "Completed (No Attachments)",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "7bed625f4b770a1e8c2356c49f9274db",
+    "source_log_file": "JobsResults22052025.txt",
+    "run_start_time": "2025-05-22 18:17:41",
+    "run_end_time": "2025-05-22 18:18:44",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "FW: DPI less than 300",
+    "files_processed": [
+      {
+        "id": "3394f4fd54734abf985dc164bed2e8fc",
+        "file_name": "Wilson Construction 118046.pdf",
+        "bod_id": "20250522181828598-118046",
+        "bod_status": "Failure Status Code: 412",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "118046",
+          "invoice_date": "2025-01-09",
+          "purchase_order": "",
+          "subtotal": "626.40",
+          "total": "681.52",
+          "currency": "USD",
+          "vendor": "Wenatchee Clinic",
+          "payment_terms": "",
+          "vat_registration_number": "",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "Expense Invoice",
+          "bban": "100.111.8432.760210",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": null,
+            "description": "Repair leaky Shower",
+            "unit_price": "80.00",
+            "quantity": "7",
+            "subtotal": "560.00"
+          },
+          {
+            "item_code": null,
+            "description": "materials - Tile,calk, Morter and Grout",
+            "unit_price": null,
+            "quantity": null,
+            "subtotal": "66.40"
+          }
+        ],
+        "file_status": "Failed",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 118046\nIndex : 1 Invoice Date : 2025-01-09\nIndex : 2 Purchase Order(Number) : \nIndex : 3 Sub Total : 626.40\nIndex : 4 Total Amount : 681.52\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : Wenatchee Clinic\nIndex : 7 Payment Terms : \nIndex : 8 VAT Registration Number : \nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Packing Slip Number : \nIndex : 13 Other Charges : \nIndex : 14 ",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 0,
+    "files_failed_processing": 1,
+    "run_status": "Failed (All Files Failed)",
+    "applied_rules": [
+      {
+        "rule_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "rule_name": "Flag Failed BOD Status",
+        "action": "flag_bod_failure",
+        "matched_field": "bod_status",
+        "matched_value": "Failure Status Code: 412",
+        "context": "File: Wilson Construction 118046.pdf"
+      }
+    ]
+  },
+  {
+    "transaction_id": "64af14c527fac20bb6e34e11c31b7c5a",
+    "source_log_file": "JobsResults24052025.txt",
+    "run_start_time": "2025-05-24 21:23:52",
+    "run_end_time": "2025-05-24 21:24:42",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "Expense L",
+    "files_processed": [
+      {
+        "id": "c51c7e77a36b40c8b549ba1899c56c51",
+        "file_name": "INV - Example 2.pdf",
+        "bod_id": "20250524212437342-QK20210724L",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "QK20210724L",
+          "invoice_date": "2025-05-07",
+          "purchase_order": "",
+          "subtotal": "29484.00",
+          "total": "29484.00",
+          "currency": "USD",
+          "vendor": "Shenzhen BSO Building Material Co.,Ltd.",
+          "payment_terms": "TT 30 DAYS FROM INVOICE DATE",
+          "vat_registration_number": "91440300699085158",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "Expense Invoice",
+          "bban": "127838258838",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": "21.093.09",
+            "description": "Uitloop NF square BLK",
+            "unit_price": "15.21",
+            "quantity": "780",
+            "subtotal": "11863.80"
+          },
+          {
+            "item_code": "20.425.09",
+            "description": "Hendel MK/NF BLK",
+            "unit_price": "1.26",
+            "quantity": "780",
+            "subtotal": "982.80"
+          },
+          {
+            "item_code": "20.450.09",
+            "description": "Knop NF BLK",
+            "unit_price": "8.70",
+            "quantity": "780",
+            "subtotal": "6786.00"
+          },
+          {
+            "item_code": "21.172.09",
+            "description": "Set Kap en buitenmantel NF BLK",
+            "unit_price": "12.63",
+            "quantity": "780",
+            "subtotal": "9851.40"
+          }
+        ],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : QK20210724L\nIndex : 1 Invoice Date : 2025-05-07\nIndex : 2 Purchase Order(Number) : \nIndex : 3 Sub Total : 29484.00\nIndex : 4 Total Amount : 29484.00\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : Shenzhen BSO Building Material Co.,Ltd.\nIndex : 7 Payment Terms : TT 30 DAYS FROM INVOICE DATE\nIndex : 8 VAT Registration Number : 91440300699085158\nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 1,
+    "files_failed_processing": 0,
+    "run_status": "Completed",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "245cb9c4e0cd9619ee4cd6898f7ff410",
+    "source_log_file": "JobsResults24052025.txt",
+    "run_start_time": "2025-05-24 21:35:31",
+    "run_end_time": "2025-05-24 21:39:23",
+    "email_response_status_code": "200",
+    "total_email_count": "2",
+    "subject": "Exception_PDF's_JuneTest_LNIP",
+    "files_processed": [
+      {
+        "id": "419ec34c58df4f7b847f7c52afdebf1f",
+        "file_name": "corruptedInvoice.pdf",
+        "bod_id": null,
+        "bod_status": null,
+        "doc_added_to_idm": false,
+        "notification_sent": false,
+        "idp_status": "IDP Exception: Unexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.",
+        "idp_response_code": null,
+        "fields": null,
+        "items": [],
+        "file_status": "Failed",
+        "raw_content_snippet": "IDP ExceptionUnexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.\n==========================================================\n",
+        "errors": []
+      },
+      {
+        "id": "a2aba134d6914f49b6adeaa14a7953e9",
+        "file_name": "DPF.pdf",
+        "bod_id": null,
+        "bod_status": null,
+        "doc_added_to_idm": false,
+        "notification_sent": false,
+        "idp_status": "IDP Exception: Unexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.",
+        "idp_response_code": null,
+        "fields": null,
+        "items": [],
+        "file_status": "Failed",
+        "raw_content_snippet": "IDP ExceptionUnexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.\n==========================================================\n",
+        "errors": []
+      },
+      {
+        "id": "001a392b1e394caaabe23a7a6810a160",
+        "file_name": "invoice.final.v3.2025..pdf",
+        "bod_id": null,
+        "bod_status": null,
+        "doc_added_to_idm": false,
+        "notification_sent": false,
+        "idp_status": "IDP Exception: Unexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.",
+        "idp_response_code": null,
+        "fields": null,
+        "items": [],
+        "file_status": "Failed",
+        "raw_content_snippet": "IDP ExceptionUnexpected Error occured in Extract Data Activity: Bad Request while Polling OCR.\n==========================================================\n",
+        "errors": []
+      },
+      {
+        "id": "144c60dde48445cb8801182b802fd21d",
+        "file_name": "Inv_003_(Final_Ver)_2025%Approved.pdf",
+        "bod_id": "20250524213833326-2402182",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "2402182",
+          "invoice_date": "2025-10-22",
+          "purchase_order": "PO0000169",
+          "subtotal": "27.00",
+          "total": "27.00",
+          "currency": "EUR",
+          "vendor": "Bohao Prototype Manufacturing Co.,Limited",
+          "payment_terms": "30 days netto",
+          "vat_registration_number": "NL808503819B01",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "PO Invoice",
+          "bban": "015515680167070",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": null,
+            "description": "lense for optical sensor",
+            "unit_price": "9.00",
+            "quantity": "3",
+            "subtotal": "27.00"
+          }
+        ],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 2402182\nIndex : 1 Invoice Date : 2025-10-22\nIndex : 2 Purchase Order(Number) : PO0000169\nIndex : 3 Sub Total : 27.00\nIndex : 4 Total Amount : 27.00\nIndex : 5 Currency : EUR\nIndex : 6 Vendor Name : Bohao Prototype Manufacturing Co.,Limited\nIndex : 7 Payment Terms : 30 days netto\nIndex : 8 VAT Registration Number : NL808503819B01\nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Pa",
+        "errors": []
+      },
+      {
+        "id": "221c7cfba4794b5da03d2d0bffcef47c",
+        "file_name": "INV - Example 2.pdf",
+        "bod_id": "20250524213916560-QK20210724L",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "QK20210724L",
+          "invoice_date": "2025-05-07",
+          "purchase_order": "",
+          "subtotal": "29484.00",
+          "total": "29484.00",
+          "currency": "USD",
+          "vendor": "Shenzhen BSO Building Material Co.,Ltd.",
+          "payment_terms": "TT 30 DAYS FROM INVOICE DATE",
+          "vat_registration_number": "91440300699085158",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "Expense Invoice",
+          "bban": "127838258838",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": "21.093.09",
+            "description": "Uitloop NF square BLK",
+            "unit_price": "15.21",
+            "quantity": "780",
+            "subtotal": "11863.80"
+          },
+          {
+            "item_code": "20.425.09",
+            "description": "Hendel MK/NF BLK",
+            "unit_price": "1.26",
+            "quantity": "780",
+            "subtotal": "982.80"
+          },
+          {
+            "item_code": "20.450.09",
+            "description": "Knop NF BLK",
+            "unit_price": "8.70",
+            "quantity": "780",
+            "subtotal": "6786.00"
+          },
+          {
+            "item_code": "21.172.09",
+            "description": "Set Kap en buitenmantel NF BLK",
+            "unit_price": "12.63",
+            "quantity": "780",
+            "subtotal": "9851.40"
+          }
+        ],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : QK20210724L\nIndex : 1 Invoice Date : 2025-05-07\nIndex : 2 Purchase Order(Number) : \nIndex : 3 Sub Total : 29484.00\nIndex : 4 Total Amount : 29484.00\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : Shenzhen BSO Building Material Co.,Ltd.\nIndex : 7 Payment Terms : TT 30 DAYS FROM INVOICE DATE\nIndex : 8 VAT Registration Number : 91440300699085158\nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 5,
+    "files_successfully_processed": 2,
+    "files_failed_processing": 3,
+    "run_status": "Partial Success",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "66821169289cf44d162844470619a5ae",
+    "source_log_file": "JobsResults27052025.txt",
+    "run_start_time": "2025/05/27 20:39:52",
+    "run_end_time": "2025/05/27 20:40:39",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "Expense",
+    "files_processed": [
+      {
+        "id": "62e5f0f9dd94488caca8ba5457c3913c",
+        "file_name": "BP0145244 FEDEX.pdf",
+        "bod_id": null,
+        "bod_status": null,
+        "doc_added_to_idm": false,
+        "notification_sent": false,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "1234567891",
+          "invoice_date": "2025-02-20",
+          "purchase_order": "",
+          "subtotal": "",
+          "total": "",
+          "currency": "USD",
+          "vendor": "FedEx",
+          "payment_terms": "Your payment is due by Mar 07, 2025",
+          "vat_registration_number": "",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "Expense Invoice",
+          "bban": "",
+          "discount_description": ""
+        },
+        "items": [],
+        "file_status": "Failed",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 1234567891\nIndex : 1 Invoice Date : 2025-02-20\nIndex : 2 Purchase Order(Number) : \nIndex : 3 Sub Total : \nIndex : 4 Total  Amount : \nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : FedEx\nIndex : 7 Payment Terms : Your payment is due by Mar 07, 2025\nIndex : 8 VAT Registration  Number : \nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Packing Slip Number : \nIndex : 13 Other  Cha",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 0,
+    "files_failed_processing": 1,
+    "run_status": "Failed (All Files Failed)",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "95eb238893d3f0bd8b3e141d5941a557",
+    "source_log_file": "JobsResults29052025.txt",
+    "run_start_time": "2025/05/29 10:42:27",
+    "run_end_time": "2025/05/29 10:43:16",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "PO38_IN1313",
+    "files_processed": [
+      {
+        "id": "71baaa35e16d4235a8ba8adae7bcc747",
+        "file_name": "BP0207204 HENDRICKSON BUMPER_29May.pdf",
+        "bod_id": "20250529104311962-11214981",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "11214981",
+          "invoice_date": "2025-05-29",
+          "purchase_order": "PPA000038",
+          "subtotal": "",
+          "total": "545.55",
+          "currency": "USD",
+          "vendor": "Hendrickson, USA, LLC.",
+          "payment_terms": "NET 45 DAYS",
+          "vat_registration_number": "",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "1313",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "PO Invoice",
+          "bban": "",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": "104732XT",
+            "description": "SP BB CVFE BUSREAR BPRCF 22-",
+            "unit_price": "181.85",
+            "quantity": "3",
+            "subtotal": "545.55"
+          }
+        ],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 11214981\nIndex : 1 Invoice Date : 2025-05-29\nIndex : 2 Purchase Order(Number) : PPA000038\nIndex : 3 Sub Total : \nIndex : 4 Total Amount : 545.55\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : Hendrickson, USA, LLC.\nIndex : 7 Payment Terms : NET 45 DAYS\nIndex : 8 VAT Registration Number : \nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Packing Slip Number : 1313\nIndex : 13 Ot",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 1,
+    "files_failed_processing": 0,
+    "run_status": "Completed",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "afe16f545fdf043a03b244e2c5431d84",
+    "source_log_file": "JobsResults29052025.txt",
+    "run_start_time": "2025/05/29 11:25:44",
+    "run_end_time": "2025/05/29 11:26:33",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "Expense (987654322)",
+    "files_processed": [
+      {
+        "id": "41a24e1f1cb64d259f18836bc40db46e",
+        "file_name": "BP0145244 FEDEX_Expense (987654321).pdf",
+        "bod_id": "20250529112628479-987654322",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "987654322",
+          "invoice_date": "2025-02-20",
+          "purchase_order": "",
+          "subtotal": "",
+          "total": "133.61",
+          "currency": "USD",
+          "vendor": "FedEx",
+          "payment_terms": "Payment is due by Mar 07, 2025",
+          "vat_registration_number": "",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "Expense Invoice",
+          "bban": "",
+          "discount_description": ""
+        },
+        "items": [],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 987654322\nIndex : 1 Invoice Date : 2025-02-20\nIndex : 2 Purchase Order(Number) : \nIndex : 3 Sub Total : \nIndex : 4 Total Amount : 133.61\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : FedEx\nIndex : 7 Payment Terms : Payment is due by Mar 07, 2025\nIndex : 8 VAT Registration Number : \nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Packing Slip Number : \nIndex : 13 Other Charge",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 1,
+    "files_failed_processing": 0,
+    "run_status": "Completed",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "4165ccc3af1ba45a4be1dcd63e8c240c",
+    "source_log_file": "JobsResults29052025.txt",
+    "run_start_time": "2025/05/29 11:57:59",
+    "run_end_time": "2025/05/29 11:58:49",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "IN82_PO39",
+    "files_processed": [
+      {
+        "id": "7dff6c34611440608c3dd2c199597d2d",
+        "file_name": "BP0207204 HENDRICKSON BUMPER_29May.pdf",
+        "bod_id": "20250529115844743-11214982",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "11214982",
+          "invoice_date": "2025-05-29",
+          "purchase_order": "PPA000039",
+          "subtotal": "545.55",
+          "total": "545.55",
+          "currency": "USD",
+          "vendor": "Hendrickson, USA, LLC.",
+          "payment_terms": "NET 45 DAYS",
+          "vat_registration_number": "",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "1414",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "PO Invoice",
+          "bban": "",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": "104732XT",
+            "description": "SP BB CVFE BUSREAR BPRCF 22-",
+            "unit_price": "181.85",
+            "quantity": "3",
+            "subtotal": "545.55"
+          }
+        ],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 11214982\nIndex : 1 Invoice Date : 2025-05-29\nIndex : 2 Purchase Order(Number) : PPA000039\nIndex : 3 Sub Total : 545.55\nIndex : 4 Total Amount : 545.55\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : Hendrickson, USA, LLC.\nIndex : 7 Payment Terms : NET 45 DAYS\nIndex : 8 VAT Registration Number : \nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Packing Slip Number : 1414\nIndex :",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 1,
+    "files_failed_processing": 0,
+    "run_status": "Completed",
+    "applied_rules": []
+  },
+  {
+    "transaction_id": "4f0d83edfcdd5f51fc471189a7ef566e",
+    "source_log_file": "JobsResults29052025.txt",
+    "run_start_time": "2025/05/29 12:06:43",
+    "run_end_time": "2025/05/29 12:07:32",
+    "email_response_status_code": "200",
+    "total_email_count": "1",
+    "subject": "IN82_PO39",
+    "files_processed": [
+      {
+        "id": "d67bc279e6dc4ed89e5460eb2cebfbff",
+        "file_name": "BP0207204 HENDRICKSON BUMPER_29May.pdf",
+        "bod_id": "20250529120728092-11214982",
+        "bod_status": "Success",
+        "doc_added_to_idm": true,
+        "notification_sent": true,
+        "idp_status": "Success",
+        "idp_response_code": 200,
+        "fields": {
+          "invoice_number": "11214982",
+          "invoice_date": "2025-05-29",
+          "purchase_order": "PPA000039",
+          "subtotal": "545.55",
+          "total": "545.55",
+          "currency": "USD",
+          "vendor": "Hendrickson, USA, LLC.",
+          "payment_terms": "NET 45 DAYS",
+          "vat_registration_number": "",
+          "organisation_number": "",
+          "iban": "",
+          "discount": "",
+          "packing_slip_number": "1414",
+          "other_charges": "",
+          "charges_descriptions": "",
+          "invoice_type": "PO Invoice",
+          "bban": "",
+          "discount_description": ""
+        },
+        "items": [
+          {
+            "item_code": "104732XT",
+            "description": "SP BB CVFE BUSREAR BPRCF 22-",
+            "unit_price": "181.85",
+            "quantity": "3",
+            "subtotal": "545.55"
+          }
+        ],
+        "file_status": "Success",
+        "raw_content_snippet": "Extracting Invoice Data using IDP...\nIDP Response: 200\nIndex : 0 Invoice Number : 11214982\nIndex : 1 Invoice Date : 2025-05-29\nIndex : 2 Purchase Order(Number) : PPA000039\nIndex : 3 Sub Total : 545.55\nIndex : 4 Total Amount : 545.55\nIndex : 5 Currency : USD\nIndex : 6 Vendor Name : Hendrickson, USA, LLC.\nIndex : 7 Payment Terms : NET 45 DAYS\nIndex : 8 VAT Registration Number : \nIndex : 9 Organisation Number : \nIndex : 10 IBAN : \nIndex : 11 Discount : \nIndex : 12 Packing Slip Number : 1414\nIndex :",
+        "errors": []
+      }
+    ],
+    "total_attachments_in_run": 1,
+    "files_successfully_processed": 1,
+    "files_failed_processing": 0,
+    "run_status": "Completed",
+    "applied_rules": []
+  }
+]
