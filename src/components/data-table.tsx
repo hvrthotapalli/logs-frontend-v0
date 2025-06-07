@@ -109,6 +109,35 @@ export const schema = z.object({
   target: z.string(),
   limit: z.string(),
   reviewer: z.string(),
+  transaction_id: z.string(),
+  source_log_file: z.string(),
+  run_start_time: z.string(),
+  run_end_time: z.string(),
+  email_response_status_code: z.string(),
+  total_email_count: z.string(),
+  subject: z.string(),
+  files_processed: z.array(
+    z.object({
+      id: z.string(),
+      file_name: z.string(),
+      bod_id: z.string().nullable(),
+      bod_status: z.string().nullable(),
+      doc_added_to_idm: z.boolean(),
+      notification_sent: z.boolean(),
+      idp_status: z.string(),
+      idp_response_code: z.string().nullable(),
+      fields: z.unknown().nullable(),
+      items: z.array(z.unknown()),
+      file_status: z.string(),
+      raw_content_snippet: z.string(),
+      errors: z.array(z.string()),
+    })
+  ),
+  total_attachments_in_run: z.number(),
+  files_successfully_processed: z.number(),
+  files_failed_processing: z.number(),
+  run_status: z.string(),
+  applied_rules: z.array(z.unknown()),
 });
 
 // Create a separate component for the drag handle
@@ -138,88 +167,42 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     cell: ({ row }) => <DragHandle id={row.original.id} />,
   },
   {
-    id: "select",
-    header: ({ table }) => (
-      <div className="flex items-center justify-center">
-        <Checkbox
-          checked={
-            table.getIsAllPageRowsSelected() ||
-            (table.getIsSomePageRowsSelected() && "indeterminate")
-          }
-          onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-          aria-label="Select all"
-        />
-      </div>
-    ),
-    cell: ({ row }) => (
-      <div className="flex items-center justify-center">
-        <Checkbox
-          checked={row.getIsSelected()}
-          onCheckedChange={(value) => row.toggleSelected(!!value)}
-          aria-label="Select row"
-        />
-      </div>
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
-  {
-    accessorKey: "header",
-    header: "Header",
+    accessorKey: "transaction_id",
+    header: "Id",
     cell: ({ row }) => {
       return <TableCellViewer item={row.original} />;
     },
     enableHiding: false,
   },
   {
-    accessorKey: "type",
-    header: "Section Type",
+    accessorKey: "Subject",
+    header: "Email Subject",
     cell: ({ row }) => (
       <div className="w-32">
         <Badge variant="outline" className="text-muted-foreground px-1.5">
-          {row.original.type}
+          {row.original.subject}
         </Badge>
       </div>
     ),
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "run_status",
+    header: "Overall Status",
     cell: ({ row }) => (
       <Badge variant="outline" className="text-muted-foreground px-1.5">
-        {row.original.status === "Done" ? (
+        {row.original.status === "Success" ? (
           <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
         ) : (
           <IconLoader />
         )}
-        {row.original.status}
+        {row.original.run_status}
       </Badge>
     ),
   },
   {
-    accessorKey: "target",
-    header: () => <div className="w-full text-right">Target</div>,
-    cell: ({ row }) => (
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
-            loading: `Saving ${row.original.header}`,
-            success: "Done",
-            error: "Error",
-          });
-        }}
-      >
-        <Label htmlFor={`${row.original.id}-target`} className="sr-only">
-          Target
-        </Label>
-        <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
-          defaultValue={row.original.target}
-          id={`${row.original.id}-target`}
-        />
-      </form>
-    ),
+    accessorKey: "total_attachments_in_run",
+    header: () => <div className="w-full text-right">No.Of Invoices</div>,
+    cell: ({ row }) => <div>{row.original.total_attachments_in_run}</div>,
   },
   {
     accessorKey: "limit",
@@ -356,7 +339,7 @@ export function DataTable({
   );
 
   const dataIds = React.useMemo<UniqueIdentifier[]>(
-    () => data?.map(({ id }) => id) || [],
+    () => data?.map(({ transaction_id: id }) => id) || [],
     [data]
   );
 
@@ -464,10 +447,6 @@ export function DataTable({
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" size="sm">
-            <IconPlus />
-            <span className="hidden lg:inline">Add Section</span>
-          </Button>
         </div>
       </div>
       <TabsContent
