@@ -43,19 +43,19 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/",
       icon: IconDashboard,
     },
     {
       title: "Transactions",
-      url: "#",
-      icon: IconListDetails,
+      url: "/transactions",
+      icon: IconChartBar,
     },
   ],
   navSecondary: [
     {
       title: "Settings",
-      url: "#",
+      url: "/settings",
       icon: IconSettings,
     },
   ],
@@ -73,7 +73,7 @@ export default function AppSidebar({
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <a href="/">
                 <IconBrandDenodo className="!size-5" />
                 <span className="text-base font-semibold">LNIP Dashboard</span>
               </a>
@@ -101,7 +101,7 @@ export function AppSidebarClouds() {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <a href="/">
                 <IconInnerShadowTop className="!size-5" />
                 <span className="text-base font-semibold">LNIP Dashboard</span>
               </a>
